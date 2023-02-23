@@ -9,10 +9,10 @@ import preprocessing
 
 def main():
     parser = argparse.ArgumentParser()  
-    parser.add_argument('--textstring', help='the text you want to generate', default='Generating text', type=str)  
-    parser.add_argument('--writersource', help="path of the image of the desired writer, (e.g. './assets/image.png'   \
+    parser.add_argument("-t", '--textstring', help='the text you want to generate', default='Generating text', type=str)  
+    parser.add_argument("-s", '--writersource', help="path of the image of the desired writer, (e.g. './assets/image.png'   \
                                                 will use random from ./assets if unspecified", default=None)
-    parser.add_argument('--name', help="path for generated image (e.g. './assets/sample.png'), \
+    parser.add_argument("-o", '--name', help="path for generated image (e.g. './assets/sample.png'), \
                                              will not be saved if unspecified", default=None)
     parser.add_argument('--diffmode', help="what kind of y_t-1 prediction to use, use 'standard' for  \
                                             Eq 9 in paper, will default to prediction in Eq 12", default='new', type=str)
